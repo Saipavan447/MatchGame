@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
 }
 .website-logo {
   width: 120px;
@@ -32,7 +33,7 @@
   color: #fec653;
   font-weight: bold;
 }
-.timer-contianer {
+.timer-container {
   display: flex;
 }
 .timer-image {

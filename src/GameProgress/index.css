@@ -5,26 +5,27 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-bg.png');
+  background-image: url(https://assets.ccbp.in/frontend/react-js/match-game-bg.png);
   background-size: cover;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .game-container {
     justify-content: center;
     align-items: center;
   }
 }
+
 .match-image {
   width: 90%;
   border-radius: 5px;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .match-image {
     width: 50%;
     border-radius: 5px;
   }
 }
-.tabs-items-container {
+.tab-items-container {
   width: 100%;
   margin-top: 20px;
   list-style-type: none;

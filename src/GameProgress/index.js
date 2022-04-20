@@ -1,13 +1,11 @@
 import './index.css'
-
 import TabItem from '../TabItem'
-
 import ThumbnailItem from '../ThumbnailItem'
 
 const GameProgress = props => {
   const {
     allImagesList,
-    tabs,
+    tabsList,
     thumbnailImages,
     activeTabId,
     currentImageId,
@@ -15,11 +13,12 @@ const GameProgress = props => {
     onClickThumbnail,
   } = props
 
+  // functions
   const getImage = () =>
     allImagesList.find(image => image.id === currentImageId)
   const renderTabs = () => (
-    <ul className="tab-item-container">
-      {tabs.map(tab => (
+    <ul className="tab-items-container">
+      {tabsList.map(tab => (
         <TabItem
           tabDetails={tab}
           active={tab.tabId === activeTabId}
@@ -29,9 +28,8 @@ const GameProgress = props => {
       ))}
     </ul>
   )
-
   const renderThumbnails = () => (
-    <ul className="thumbnail-container">
+    <ul className="thumbnails-container">
       {thumbnailImages.map(thumbnail => (
         <ThumbnailItem
           thumbnail={thumbnail}
@@ -43,7 +41,6 @@ const GameProgress = props => {
   )
 
   const {imageUrl} = getImage()
-
   return (
     <div className="game-container">
       <img className="match-image" src={imageUrl} alt="match" />
